@@ -7,5 +7,5 @@ ON likeA.liker_id = likeB.likee_id AND likeB.liker_id = likeA.likee_id
 JOIN student a
 ON a.id = likeA.liker_id
 JOIN student b
-ON b.id = likeB.liker_id
+ON b.id = likeB.liker_id AND a.name < b.name
 ORDER BY a.name;
